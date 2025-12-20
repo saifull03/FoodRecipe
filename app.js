@@ -113,6 +113,12 @@ function showDetails(meal) {
 closeModal.addEventListener("click", () => {
   modal.classList.add("hidden");
 });
+// ENTER KEY SEARCH
+searchInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    searchBtn.click();
+  }
+});
 
 /* ---------------------------
    BACK TO TOP
