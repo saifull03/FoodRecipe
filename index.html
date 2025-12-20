@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Recipe App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold text-orange-500">Thatix</h1>
+        <div class="space-x-4 text-gray-600">
+          <a href="#">Home</a>
+          <a href="#">Recipes</a>
+          <a href="#">About</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section
+      class="relative bg-cover bg-center h-72"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+      "
+    >
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div
+        class="relative h-full flex flex-col justify-center items-center text-white"
+      >
+        <h1 class="text-4xl font-bold">Search Your Favorite Recipe</h1>
+        <p class="mt-2 text-sm text-gray-200">
+          A handful of simple ingredients typify the fresh flavors of cooking
+        </p>
+
+        <div class="mt-6 flex w-full max-w-xl">
+          <input
+            id="searchInput"
+            class="w-full p-3 rounded-l outline-none text-black"
+            placeholder="Search..."
+          />
+          <button
+            id="searchBtn"
+            class="bg-orange-500 px-6 rounded-r text-white font-semibold"
+          >
+            🔍
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- LATEST RECIPES -->
+    <section class="max-w-7xl mx-auto px-6 py-10">
+      <h2 class="text-3xl font-semibold mb-8 text-center">Latest Recipes</h2>
+
+      <div
+        id="foodList"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
+      ></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+      © 2023 - All rights reserved
+    </footer>
+    <!-- LOADING -->
+    <div
+      id="loading"
+      class="fixed inset-0 bg-white/80 hidden flex items-center justify-center z-50"
+    >
+      <div
+        class="animate-spin rounded-full h-16 w-16 border-4 border-orange-500 border-t-transparent"
+      ></div>
+    </div>
+
+    <!-- MODAL -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50"
+    >
+      <div class="bg-white max-w-xl p-6 rounded-lg relative">
+        <button
+          id="closeModal"
+          class="absolute top-2 right-3 text-xl text-red-600"
+        >
+          ✖
+        </button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button
+      id="topBtn"
+      class="hidden fixed bottom-6 right-6 bg-orange-500 text-white px-4 py-3 rounded-full shadow-lg"
+    >
+      ⬆
+    </button>
+
+    <script src="app.js"></script>
+  </body>
+</html>
