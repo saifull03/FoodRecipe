@@ -29,6 +29,7 @@ The main goal of this project is to practice **DOM manipulation**, **API integra
 - ♿ Improved keyboard accessibility
 - 🔄 Optimized API calls
 - 🎨 Clean UI built with Tailwind CSS
+- more efficient user experience
 
 ---
 
